@@ -1,0 +1,9 @@
+{
+    "host": "10.0.10.1",
+    "port": 22,
+    "user": "root",
+    "password": "#Zline59\\ ",
+    "ignore":[".git",".vscode"],
+    "remotePath": "/www/luci-static/bootstrap",
+    "uploadOnSave": true
+}
