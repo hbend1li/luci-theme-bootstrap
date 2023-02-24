@@ -75,9 +75,12 @@
   --primary-color-high: #4da1c0;
   --primary-color-medium: #448da6;
   --primary-color-low: #3c7a8d;
-  --error-color-high-rgb: 209,86,83;
+  /* --error-color-high-rgb: 209,86,83;
   --error-color-medium: #bf4e4c;
-  --error-color-low: #b14946;
+  --error-color-low: #b14946; */
+  --error-color-high-rgb: 209,86,83;
+  --error-color-medium: #f00;
+  --error-color-low: #f00;
   --success-color-high-rgb: 0,166,108;
   --success-color-medium: #00945e;
   --success-color-low: #008252;
@@ -733,9 +736,10 @@ header {
   color: #BFBFBF;
   display: flex;
   background: var(--header-background-color);
-  box-shadow: 0 1px 3px hsla(var(--border-color-low-hsl),.25),inset 0 -1px 0 hsla(var(--border-color-low-hsl),.01);
+  /* box-shadow: 0 1px 3px hsla(var(--border-color-low-hsl),.25),inset 0 -1px 0 hsla(var(--border-color-low-hsl),.01); */
   margin: -5px -5px 15px;
-  padding: 0 calc((100% - 940px) / 2) 0 calc((100% - 940px) / 2)
+  padding: 0 calc((100% - 940px) / 2) 0 calc((100% - 940px) / 2);
+  border-bottom: 1px solid #222;
 }
 
 header a {
@@ -754,6 +758,7 @@ header .brand {
   background-image: var(--brand-logo);
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
   text-indent: -9999px;
 
   float: left;
@@ -797,7 +802,7 @@ header p {
   float: none;
   line-height: 19px;
   text-decoration: none;
-  padding: 10px 10px 11px
+  padding: 20px 0.75rem;
 }
 
 .nav a:hover {
@@ -820,11 +825,11 @@ header p {
 .nav .dropdown-menu li a {
   /* color: #999; */
   /* text-shadow: 0 1px 0 rgba(0,0,0,0.5); */
-  padding: 4px 15px
+  padding: 6px 15px
 }
 
 .nav .dropdown-menu li a:hover {
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
   /* background-repeat: repeat-x; */
   /* background-image: linear-gradient(to bottom,#292929,#191919); */
   color: #fff
@@ -849,20 +854,23 @@ a.menu:after {
   background-color: #fff;
   float: left;
   position: absolute;
-  top: 40px;
+  top: 59px;
   left: -9999px;
   z-index: 900;
   min-width: 160px;
   max-width: 220px;
   margin-left: 0;
   margin-right: 0;
-  zoom:1;border-radius: 0 0 6px 6px;
+  zoom:1;
+  /* border-radius: 0 0 6px 6px; */
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   background-clip: padding-box;
-  border-color: rgba(0,0,0,0.2);
+  /* border-color: rgba(0,0,0,0.2);
   border-style: solid;
-  border-width: 0 1px 1px;
-  padding: 6px 0
+  border-width: 0 1px 1px; */
+  background-color: 1c1c1c;
+  border: 1px solid #3d3d3d;
+  padding: 6px 0;
 }
 
 .dropdown-menu li {
@@ -879,7 +887,7 @@ a.menu:after {
   line-height: 18px;
   color: gray;
   /* text-shadow: 0 1px 0 #fff; */
-  padding: 4px 15px
+  padding: 6px 15px
 }
 
 .dropdown-menu a:hover {
@@ -1109,7 +1117,9 @@ body.modal-overlay-active #modal_overlay {
 .btn.danger,.alert-message.danger,.btn.error,.alert-message.error,.cbi-tooltip.error {
   background: linear-gradient(var(--error-color-low),var(--error-color-medium));
   color: var(--on-error-color);
-  border-color: var(--error-color-high) var(--error-color-high) var(--error-color-low)
+  /* border-color: var(--error-color-high) var(--error-color-high) var(--error-color-low); */
+  border: 0;
+  padding: 1em 2em;;
 }
 
 .btn.success,.alert-message.success,.cbi-tooltip.success {
